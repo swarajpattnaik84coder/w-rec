@@ -3,7 +3,7 @@ dns.setServers(['8.8.8.8','8.8.4.4'])
 import {app} from "./app.js"
 import dotenv from 'dotenv' //! ispe dhyan do, dotenv ko import karne ka tarika
 //import mongoose from "mongoose";
-//import { DB_NAME } from "./constants";
+//import { DB_NAME } from "./constants.js";
 import connectDB from './db/index.js';
 dotenv.config({
     path: './.env'

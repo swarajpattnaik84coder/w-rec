@@ -28,14 +28,20 @@ chai-backend/
 │   └── temp/               # Temporary landing directory for Multer uploads (.gitkeep)
 ├── src/
 │   ├── controllers/        # Request handlers and business logic
+│   │   ├── comment.controller.js
+│   │   ├── tweet.controller.js
 │   │   └── user.controller.js
 │   ├── db/                 # MongoDB database connection logic
 │   │   └── index.js
 │   ├── middlewares/        # Express custom middlewares (Auth, Multer)
-│   │   ├── auth.middlewares.js
+│   │   ├── auth.middleware.js
 │   │   └── multer.middleware.js
 │   ├── models/             # Mongoose schemas and methods
+│   │   ├── comment.model.js
+│   │   ├── like.model.js
+│   │   ├── playlist.model.js
 │   │   ├── subscription.model.js
+│   │   ├── tweet.model.js
 │   │   ├── user.model.js
 │   │   └── video.model.js
 │   ├── routes/             # Express routers and endpoint definitions

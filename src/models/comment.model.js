@@ -1,5 +1,5 @@
 import mongoose, {Schema} from "mongoose";
-import { Videos } from "./video.model";
+import { Videos } from "./video.model.js";
 
 const commentSchema = new mongoose.Schema({
     
@@ -11,7 +11,7 @@ const commentSchema = new mongoose.Schema({
 
     owner:{
         type: mongoose.Types.ObjectId,
-        ref: "Uder",
+        ref: "User",
         required: true,
 
     },
@@ -25,7 +25,7 @@ const commentSchema = new mongoose.Schema({
     targetId:{
         type: mongoose.Types.ObjectId,
         required: true,
-        refPath: targetId
+        refPath: "targetType"
     }
 
 },
@@ -33,5 +33,5 @@ const commentSchema = new mongoose.Schema({
     timestamps: true
 })
 
-const Comments = mongoose.model("Comments", commentSchema)
-export{ Comments }
+const Comment = mongoose.model("Comment", commentSchema)
+export { Comment, Comment as Comments }

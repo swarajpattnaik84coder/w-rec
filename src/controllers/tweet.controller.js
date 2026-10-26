@@ -1,8 +1,8 @@
-import { ApiError } from "../utils/apiError";
-import { asyncHandler } from "../utils/asyncHandlers";
-import {User} from "../models/user.model"
-import { Tweets } from "../models/tweets.model";
-import { ApiResponse } from "../utils/ApiResponse";
+import { ApiError } from "../utils/apiError.js";
+import { asyncHandler } from "../utils/asyncHandlers.js";
+import {User} from "../models/user.model.js"
+import { Tweets } from "../models/tweet.model.js";
+import { ApiResponse } from "../utils/ApiResponse.js";
 
 const createTweet = asyncHandler( async(req,res)=>{
     const {content} = req.body;
@@ -27,3 +27,7 @@ const createTweet = asyncHandler( async(req,res)=>{
     )
 
 })
+
+export {
+    createTweet
+}
