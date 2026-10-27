@@ -474,7 +474,7 @@ const user = await User.findById(req.user._id)
             {
                 $match: new mongoose.Types.ObjectId(req.user._id)
             },
-            {//? foreignField belongs to form: collection
+            {//? foreignField belongs to from: collection
                 $lookup:{
                     from:"videos",
                     localField: "watchHistory",
